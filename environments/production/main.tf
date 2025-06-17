@@ -1,4 +1,4 @@
-module "vpc" {
+/*module "vpc" {
   source = "../../modules/vpc"
   vpc_cidr = "15.0.0.0/16"
   subnet_cidr = "15.0.1.0/24"
@@ -22,3 +22,4 @@ module "s3" {
   bucket_name = "viswa-infrabucket"
   env    = "dev"
 }
+*/
