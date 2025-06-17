@@ -10,6 +10,7 @@ backend "s3" {
   bucket         = "viswa-terraform-bucket"
   key            = "environments/dev/terraform.tfstate"
   region         = "us-east-1"
+  
  }
 }
 provider "aws" {
