@@ -14,7 +14,7 @@ pipeline {
         stage ('Terraform Init') {
             steps {
                 dir ("${TF_WORKDIR}") {
-                    sh 'terraform init'
+                    sh 'terraform init -migrate-state'
                 }
             }
         }
@@ -27,7 +27,7 @@ pipeline {
                 }
             }
         }
-        /*
+         
         stage ('Terraform approval') {
              when {
                 expression {env.BRANCH_NAME == 'production'}
@@ -37,7 +37,7 @@ pipeline {
                 input message: "approve the deployment to production?" , ok: 'Deploy'
             }
         }
-        */
+      
         stage ('terraform apply') {
             steps {
                 dir ("${TF_WORKDIR}") {
