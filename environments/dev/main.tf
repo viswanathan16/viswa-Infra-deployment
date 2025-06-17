@@ -16,3 +16,9 @@ module "ec2" {
    env = "dev"
 
 }
+
+module "s3" {
+  source = "../../modules/s3"
+  bucket_name = "viswa-InfraBucket-${var.env}"
+  env = "dev"
+}
